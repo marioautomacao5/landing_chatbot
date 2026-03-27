@@ -20,51 +20,46 @@ window.addEventListener('scroll', showElements);
 
 
 // ======================================
-// BOTÕES COMEÇAM PARADOS POR 3s
+// BOTÕES (TODOS)
 // ======================================
 
 const botoes = document.querySelectorAll('.cta-button, .whatsapp-float');
+
+
+// ======================================
+// COMEÇAM PARADOS POR 3s
+// ======================================
 
 botoes.forEach(btn => {
     btn.classList.add('animacao-parada');
 });
 
 setTimeout(() => {
+
     botoes.forEach(btn => {
         btn.classList.remove('animacao-parada');
     });
-}, 3000);
 
+    // aplica animação em TODOS os botões principais
+    const botoesPrincipais = document.querySelectorAll('.cta-button');
 
-// ======================================
-// DESTAQUE AUTOMÁTICO (efeito psicológico)
-// ======================================
+    botoesPrincipais.forEach(btn => {
+        btn.classList.add('cta-highlight');
+        btn.classList.add('btn-balanco');
+    });
 
-setTimeout(() => {
-    const principal = document.querySelector('.cta-button');
-
-    if (principal) {
-        principal.classList.add('cta-highlight');
-        principal.classList.add('btn-balanco');
-    }
-}, 3000);
-
-
-// ======================================
-// PULSO DO BOTÃO WHATSAPP
-// ======================================
-
-setTimeout(() => {
+    // aplica pulso no botão flutuante
     const whatsapp = document.querySelector('.whatsapp-float');
 
     if (whatsapp) {
         whatsapp.classList.add('whatsapp-pulse');
     }
+
 }, 3000);
 
 
 // ======================================
-// LINK DO WHATSAPP EM TODOS OS BOTÕES
+// LINK WHATSAPP EM TODOS OS BOTÕES
 // ======================================
 
 const linkWhats = "https://wa.me/14155238886?text=Olá%20quero%20meu%20vendedor%20digital%para%20WhatsApp";
