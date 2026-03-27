@@ -253,3 +253,29 @@ section {
 .cta-highlight {
   animation: destaqueBotao 2s ease-in-out infinite;
 }
+
+/* ============================= */
+/* EFEITO DE PULSO WHATSAPP */
+/* ============================= */
+
+@keyframes pulseWhats {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* aplica o efeito */
+.whatsapp-pulse {
+  animation: pulseWhats 1.8s infinite;
+}
