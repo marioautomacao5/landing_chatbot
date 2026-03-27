@@ -20,7 +20,7 @@ window.addEventListener('scroll', showElements);
 
 
 // ======================================
-// BOTÕES (TODOS)
+// TODOS OS BOTÕES
 // ======================================
 
 const botoes = document.querySelectorAll('.cta-button, .whatsapp-float');
@@ -34,26 +34,24 @@ botoes.forEach(btn => {
     btn.classList.add('animacao-parada');
 });
 
+
+// ======================================
+// APÓS 3 SEGUNDOS → TODOS ANIMAM IGUAL
+// ======================================
+
 setTimeout(() => {
 
     botoes.forEach(btn => {
+
+        // remove o estado parado
         btn.classList.remove('animacao-parada');
-    });
 
-    // aplica animação em TODOS os botões principais
-    const botoesPrincipais = document.querySelectorAll('.cta-button');
-
-    botoesPrincipais.forEach(btn => {
+        // aplica a MESMA animação em todos
         btn.classList.add('cta-highlight');
         btn.classList.add('btn-balanco');
+        btn.classList.add('whatsapp-pulse');
+
     });
-
-    // aplica pulso no botão flutuante
-    const whatsapp = document.querySelector('.whatsapp-float');
-
-    if (whatsapp) {
-        whatsapp.classList.add('whatsapp-pulse');
-    }
 
 }, 3000);
 
