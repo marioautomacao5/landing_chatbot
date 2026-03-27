@@ -278,4 +278,37 @@ section {
 /* aplica o efeito */
 .whatsapp-pulse {
   animation: pulseWhats 1.8s infinite;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+
+/* ============================= */
+/* BALANÇO VERTICAL SUAVE */
+/* ============================= */
+
+@keyframes balancoVertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-4px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn-balanco {
+  animation: balancoVertical 2.2s ease-in-out infinite;
+  animation-delay: 3s;
 }
