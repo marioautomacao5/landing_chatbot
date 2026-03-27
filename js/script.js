@@ -60,7 +60,7 @@ setTimeout(() => {
 // LINK WHATSAPP EM TODOS OS BOTÕES
 // ======================================
 
-const linkWhats = "https://wa.me/14155238886?text=Olá%20quero%20meu%20vendedor%20digital%para%20WhatsApp";
+const linkWhats = "https://wa.me/14155238886?text=Olá%20quero%20o%20meu%20vendedor%20digital%para%20WhatsApp";
 
 botoes.forEach(btn => {
     btn.addEventListener('click', function(e) {
