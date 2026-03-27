@@ -1,3 +1,4 @@
+// animação ao rolar a página
 const elements = document.querySelectorAll('.fade-in');
 
 function showElements() {
@@ -11,8 +12,21 @@ function showElements() {
     });
 }
 
-// Executa quando a página carrega
 window.addEventListener('load', showElements);
-
-// Executa quando rolar
 window.addEventListener('scroll', showElements);
+
+// ===============================
+// BOTÃO COMEÇA PARADO POR 3s
+// ===============================
+
+const botoes = document.querySelectorAll('.cta-button, .whatsapp-float');
+
+botoes.forEach(btn => {
+    btn.classList.add('animacao-parada');
+});
+
+setTimeout(() => {
+    botoes.forEach(btn => {
+        btn.classList.remove('animacao-parada');
+    });
+}, 3000);

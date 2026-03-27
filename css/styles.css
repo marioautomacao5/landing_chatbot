@@ -19,7 +19,10 @@ body {
     }
 }
 
-/* ANIMAÇÕES */
+/* ============================= */
+/* ANIMAÇÕES DE SCROLL */
+/* ============================= */
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -31,7 +34,10 @@ body {
     transform: translateY(0);
 }
 
+/* ============================= */
 /* HEADER */
+/* ============================= */
+
 header {
     padding: 90px 20px 80px 20px;
     text-align: center;
@@ -64,6 +70,10 @@ header h1 {
     margin: 25px auto 35px auto;
 }
 
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
 .cta-button {
     background: linear-gradient(135deg, #22c55e, #4ade80);
     border: none;
@@ -81,7 +91,10 @@ header h1 {
     box-shadow: 0px 8px 25px rgba(34,197,94,0.3);
 }
 
+/* ============================= */
 /* CONTADOR */
+/* ============================= */
+
 .counter {
     display: flex;
     justify-content: center;
@@ -100,7 +113,10 @@ header h1 {
     font-size: 14px;
 }
 
+/* ============================= */
 /* SEÇÕES */
+/* ============================= */
+
 section {
     padding: 80px 20px;
     max-width: 1100px;
@@ -121,7 +137,10 @@ section {
     margin-bottom: 50px;
 }
 
+/* ============================= */
 /* CARDS */
+/* ============================= */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -144,7 +163,10 @@ section {
 .card h3 { margin-bottom: 10px; font-size: 20px; }
 .card p { color: #94a3b8; font-size: 15px; }
 
+/* ============================= */
 /* DEPOIMENTOS */
+/* ============================= */
+
 .testimonials {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -161,7 +183,10 @@ section {
 .testimonial p { color: #94a3b8; font-size: 15px; }
 .testimonial strong { display: block; margin-top: 15px; }
 
-/* CHAT */
+/* ============================= */
+/* CHAT MOCKUP */
+/* ============================= */
+
 .chat-box {
     max-width: 420px;
     margin: auto;
@@ -181,7 +206,10 @@ section {
 .client { background: #1e293b; }
 .bot { background: #22c55e; color: black; }
 
+/* ============================= */
 /* CTA FINAL */
+/* ============================= */
+
 .cta-section {
     text-align: center;
     background: linear-gradient(135deg, #0f172a, #020617);
@@ -189,7 +217,10 @@ section {
     padding: 60px 20px;
 }
 
-/* BOTÃO WHATSAPP */
+/* ============================= */
+/* BOTÃO FLUTUANTE */
+/* ============================= */
+
 .whatsapp-float {
     position: fixed;
     bottom: 25px;
@@ -206,109 +237,30 @@ section {
 
 .whatsapp-float:hover { transform: scale(1.05); }
 
-/* MOBILE */
-@media(max-width:768px){
-    header h1 { font-size: 32px; }
-    .section-title { font-size: 28px; }
-}
-
 /* ============================= */
-/* ANIMAÇÃO DE VIBRAÇÃO */
-/* ============================= */
-
-@keyframes vibrar {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-2px); }
-  40% { transform: translateX(2px); }
-  60% { transform: translateX(-2px); }
-  80% { transform: translateX(2px); }
-  100% { transform: translateX(0); }
-}
-
-.cta-button:hover {
-  animation: vibrar 0.3s linear;
-}
-
-/* ============================= */
-/* DESTAQUE AUTOMÁTICO */
-/* ============================= */
-
-@keyframes destaqueBotao {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(34,197,94,0);
-  }
-
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(34,197,94,0.5);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(34,197,94,0);
-  }
-}
-
-.cta-highlight {
-  animation: destaqueBotao 2s ease-in-out infinite;
-}
-
-/* ============================= */
-/* EFEITO DE PULSO WHATSAPP */
+/* ANIMAÇÕES DOS BOTÕES */
 /* ============================= */
 
 @keyframes pulseWhats {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-  }
-
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* aplica o efeito */
 .whatsapp-pulse {
   animation: pulseWhats 1.8s infinite;
-  animation-delay: 3s;
-  animation-fill-mode: both;
+}
+
+/* botão começa parado */
+.animacao-parada {
+  animation: none !important;
 }
 
 /* ============================= */
-/* BALANÇO VERTICAL SUAVE */
+/* MOBILE */
 /* ============================= */
 
-@keyframes balancoVertical {
-  0% {
-    transform: translateY(0);
-  }
-
-  25% {
-    transform: translateY(-4px);
-  }
-
-  50% {
-    transform: translateY(0);
-  }
-
-  75% {
-    transform: translateY(4px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.btn-balanco {
-  animation: balancoVertical 2.2s ease-in-out infinite;
-  animation-delay: 3s;
+@media(max-width:768px){
+    header h1 { font-size: 32px; }
+    .section-title { font-size: 28px; }
 }
